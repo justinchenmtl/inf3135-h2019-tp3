@@ -1,0 +1,18 @@
+# Fichier d'objet
+*.o
+*.obj
+
+# Fichier d'exécution
+*.out
+
+# Package de fichier
+*.zip
+*.jar
+*.tar
+
+# Répertoire à ignorer
+data/
+
+# Fichier temporel
+*.swp
+*.swo
