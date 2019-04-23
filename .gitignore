@@ -1,4 +1,4 @@
-# Fichier d'objet
+﻿# Fichier d'objet
 *.o
 *.obj
 
@@ -16,3 +16,6 @@ data/
 # Fichier temporel
 *.swp
 *.swo
+
+# Fichier correction
+*.correction
