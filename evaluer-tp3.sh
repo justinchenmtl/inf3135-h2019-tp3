@@ -30,6 +30,19 @@ do
 		let i++
 		echo "$i : reussi 1 pts"
 		((count++))
+		if [[ $cmd =~ "inf3135-h2019-tp2.correction" ]]
+		then
+			rm -f evaluer.sh
+			touch evaluer.sh
+			tp2=inf3135-h2019-tp2.correction
+			for unit in `cat ${tp2}`
+			do
+				entre=`echo $unit | cut -d ' ' -f 7-`
+				cmdline=`echo $entre | awk '$1=$1'`
+			    echo $cmdline >> evaluer.sh
+			done
+			chmod +x evaluer.sh
+		fi
 	elif [ $code -eq 1 ] && ([[ $cmd =~ "./data/data.txt" ]] || [[ $cmd == "./tp2" ]])
 	then
 		let i++

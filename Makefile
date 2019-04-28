@@ -1,4 +1,4 @@
-.PHONY: clean data test resultat
+.PHONY: clean data test resultat valgrind
 
 TARGET = tp3
 OBJECTS = tp3.o
@@ -27,7 +27,7 @@ $(OUTILS).o: $(OUTILS).c
 
 clean:
 	rm -rf $(TARGET) $(CODE) *.o *.out *.zip tp2
-	rm -rf data wget-log wget-log.* *.guy
+	rm -rf data wget-log wget-log.* *.guy evaluer.sh
 
 data:
 	rm -rf ./data
