@@ -8,5 +8,5 @@
 extern long long nbParfait(long long debut, long long fin);
 extern long long indice(long long bas, long long puiss);
 extern long long echange(long long *c, long long *d);
-extern U128_t int128(void);
+extern U128_t printInt128(U128_t x);
 #endif

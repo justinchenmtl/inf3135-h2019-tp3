@@ -109,14 +109,10 @@ int main(int argc, char** argv) {
             }
 	    }
     }
-	
-	U128_t n =0;
-	n = ~n;
-	int128();
 
 
-	arrayVector inVector;
-	initVector(&inVector, 2);
+    arrayVector inVector;
+    initVector(&inVector, 2);
 
 	// Créer un fichier code.txt qui contient le code permanent qui est passé par l'argument -c
     code = fopen("code.txt", "w");
@@ -127,21 +123,21 @@ int main(int argc, char** argv) {
     long long a = scanf("%lld", &tete);
     long long b = scanf("%lld", &tail);
     if(a != 1 || b != 1 || tete < 0 || tail < 0 ){
-       return 4;
+    return 4;
     }
 
     // Déterminer le nombre minimal et maximal et echanger
-	echange(&tete, &tail);
+    echange(&tete, &tail);
     fclose(entree);
 
-	setVector(&inVector, 0, tete);
-	setVector(&inVector, 1, tail);
+    setVector(&inVector, 0, tete);
+    setVector(&inVector, 1, tail);
 //	printf("valeur a l'index 0: %lld\n", getVector(&inVector, 0));
 //	printf("valeur a l'index 1: %lld\n", getVector(&inVector, 1));
 
     // Calculer les nombres parfaits entre les intervalles
     nbParfait(getVector(&inVector, 0), getVector(&inVector, 1));
-	freeVector(&inVector);
+    freeVector(&inVector);
     return 0;
 } 
 

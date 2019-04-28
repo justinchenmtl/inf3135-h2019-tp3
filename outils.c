@@ -9,6 +9,20 @@
 
 #define EXPO 35
 
+U128_t printInt128(U128_t m)
+{
+//    const U128_t m = 3329589384618324948;
+    U128_t n = m;
+
+    enum { base = 10, max_width = 39 };
+
+    char a[max_width + 1] = { '\0' };
+    char *p = a + max_width;
+    for (; n != 0; n /= base) *--p = (char)('0' + n % base);
+    printf("%s\n",p);
+    return n;
+}
+
 // Fonction d'echange les deux nombres
 long long echange(long long *c, long long *d)
 {
@@ -58,23 +72,9 @@ long long nbParfait(long long debut, long long fin)
     }
     for(int m=n-1; m>=0; --m){
         if(tab[m] >= debut && tab[m] <= fin){
-            printf("%lld\n", tab[m]);
+            printInt128(tab[m]);
         }
     }
     return 0;
 }
 
-U128_t int128(void)
-{
-    const U128_t m = 3329589384618324948;
-    U128_t n = m * m;
-
-    enum { base = 10, max_width = 39 };
-
-    char a[max_width + 1] = { '\0' };
-    char *p = a + max_width;
-    for (; n != 0; n /= base) *--p = (char)('0' + n % base);
-
- //   printf("%s\n", p);
-   return n;
-}
