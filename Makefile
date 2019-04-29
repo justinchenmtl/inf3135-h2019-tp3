@@ -27,7 +27,7 @@ $(OUTILS).o: $(OUTILS).c
 
 clean:
 	rm -rf $(TARGET) $(CODE) *.o *.out *.zip tp2
-	rm -rf data wget-log wget-log.* *.guy evaluer.sh
+	rm -rf data wget-log wget-log.* *.guy evaluer.sh *.correction
 
 data:
 	rm -rf ./data

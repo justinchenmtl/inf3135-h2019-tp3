@@ -110,11 +110,11 @@ int main(int argc, char** argv) {
 	    }
     }
 
-
-    arrayVector inVector;
+//    readInt128();
+    arrayVector_s inVector;
     initVector(&inVector, 2);
 
-	// Créer un fichier code.txt qui contient le code permanent qui est passé par l'argument -c
+    // Créer un fichier code.txt qui contient le code permanent qui est passé par l'argument -c
     code = fopen("code.txt", "w");
     fprintf(code, "%s\n", argv[2]);
     fclose(code);
@@ -132,8 +132,6 @@ int main(int argc, char** argv) {
 
     setVector(&inVector, 0, tete);
     setVector(&inVector, 1, tail);
-//	printf("valeur a l'index 0: %lld\n", getVector(&inVector, 0));
-//	printf("valeur a l'index 1: %lld\n", getVector(&inVector, 1));
 
     // Calculer les nombres parfaits entre les intervalles
     nbParfait(getVector(&inVector, 0), getVector(&inVector, 1));
