@@ -8,19 +8,7 @@
 #include "structure.h"
 
 #define EXPO 55
-/*
-void scanInt128(U128_t &x)
-{
-    x = 0;
-    int f = 1;
-    char ch;
-    if((ch = getchar()) == '-') f = -f;
-    else x = x*10 + ch-'0';
-    while((ch = getchar()) >= '0' && ch <= '9')
-        x = x*10 + ch-'0';
-    x *= f;
-}
-*/
+
 U128_s readInt128()
 {
     U128_s x=0,f=1;
